@@ -1,4 +1,4 @@
-# samoan-privacy
+# tusi-a-mamona-privacy
 
 Privacy policy + support page for the iOS / iPadOS / macOS app
 **O le Tusi a Mamona — Interlinear** (Samoan Book of Mormon) by Chris Lambe.
