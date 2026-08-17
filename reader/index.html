@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sm">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>O le Tusi a Mamona — Interlinear</title>
+<meta name="description" content="A Samoan–English interlinear Book of Mormon. Every Samoan word glossed phrase by phrase against the official English edition.">
+<meta name="theme-color" content="#1e2233">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="chrome">
+  <button id="btn-back" class="chrome-btn" hidden aria-label="Back">‹</button>
+  <button id="btn-library" class="chrome-btn" aria-label="Library">☰</button>
+  <h1 id="title">O le Tusi a Mamona</h1>
+  <button id="btn-search" class="chrome-btn" aria-label="Search">⌕</button>
+  <button id="btn-settings" class="chrome-btn" aria-label="Display settings">Aa</button>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<nav id="pager" class="pager" hidden>
+  <button id="btn-prev" class="pager-btn">‹ Mu&#39;a</button>
+  <span id="pager-label"></span>
+  <button id="btn-next" class="pager-btn">Sosoo ›</button>
+</nav>
+
+<!-- Library drawer -->
+<div id="drawer-scrim" class="scrim" hidden></div>
+<aside id="drawer" class="drawer" hidden aria-label="Library">
+  <div class="drawer-head">Tusi</div>
+  <div id="drawer-body"></div>
+</aside>
+
+<!-- Display settings -->
+<div id="settings" class="sheet" hidden>
+  <div class="sheet-inner">
+    <div class="sheet-head">
+      <span>Fa&#39;aaliga</span>
+      <button id="btn-settings-close" class="chrome-btn" aria-label="Close">×</button>
+    </div>
+    <label class="row">
+      <span>Lapo&#39;a o mataitusi</span>
+      <input id="font-scale" type="range" min="0.8" max="2.0" step="0.1" value="1">
+    </label>
+    <label class="row">
+      <span>Fa&#39;ailoga leo <small>(diacritics)</small></span>
+      <input id="toggle-diacritics" type="checkbox">
+    </label>
+    <label class="row">
+      <span>Fa&#39;aliliuga fa&#39;aPeretania <small>(gloss)</small></span>
+      <input id="toggle-gloss" type="checkbox" checked>
+    </label>
+    <div class="row offline-row">
+      <span>Fa&#39;aaogaina e aunoa ma le initaneti</span>
+      <span id="offline-state" class="pill">…</span>
+    </div>
+    <p class="note" id="offline-note"></p>
+  </div>
+</div>
+
+<!-- Search -->
+<div id="search" class="sheet" hidden>
+  <div class="sheet-inner">
+    <div class="sheet-head">
+      <span>Su&#39;e</span>
+      <button id="btn-search-close" class="chrome-btn" aria-label="Close">×</button>
+    </div>
+    <input id="search-input" type="search" placeholder="Su&#39;e i le gagana Samoa po&#39;o le Igilisi…" autocomplete="off">
+    <p class="note" id="search-note">Sa&#39;ili i upu Samoa ma fa&#39;aliliuga fa&#39;aPeretania.</p>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
